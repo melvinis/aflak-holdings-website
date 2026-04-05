@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact IR — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .ir-nav { display:flex;gap:2px;margin-bottom:72px;flex-wrap:wrap; }
+  .ir-nav a { padding:12px 24px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--charcoal);color:rgba(245,242,237,.5);transition:all .3s;border:1px solid transparent; }
+  .ir-nav a.active,.ir-nav a:hover { color:var(--gold);border-color:rgba(184,151,106,.3); }
+
+  .contact-layout { display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start; }
+
+  .contact-detail-block { display:flex;flex-direction:column;gap:24px; }
+  .contact-detail-item { display:flex;gap:16px;align-items:flex-start; }
+  .cd-icon { width:40px;height:40px;border:1px solid rgba(184,151,106,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+  .cd-icon svg { width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+  .cd-label { font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;display:block; }
+  .cd-val { font-size:14px;color:var(--warm-white); }
+  .cd-sub { font-size:12px;color:rgba(245,242,237,.4);margin-top:2px; }
+
+  .response-sla {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,.12);
+    padding: 36px;
+    margin-top: 40px;
+  }
+  .response-sla h4 { font-family:var(--serif);font-size:18px;font-weight:400;color:var(--warm-white);margin-bottom:12px; }
+  .response-sla p { font-size:13px;color:rgba(245,242,237,.45);line-height:1.75; }
+
+  .enquiry-types { display:flex;flex-direction:column;gap:8px;margin-top:36px; }
+  .enquiry-type { display:flex;gap:12px;align-items:flex-start; }
+  .et-diamond { width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:6px; }
+  .et-text { font-size:13px;color:rgba(245,242,237,.5); }
+  .et-text strong { color:rgba(245,242,237,.8);font-weight:400; }
+
+  @media(max-width:1024px){ .contact-layout{grid-template-columns:1fr;gap:60px;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner full">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Contact Investor Relations</span></div>
+      <h1>We Welcome<br>the <em>Dialogue</em></h1>
+      <p class="page-hero-desc">Whether you are an existing partner, a prospective investor, or a member of the press, our investor relations function is here to assist. We commit to responding to all enquiries within two business days.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="ir-nav">
+      <a href="investor-relations.html">Overview</a>
+      <a href="annual-reports.html">Annual Reports</a>
+      <a href="governance.html">Governance</a>
+      <a href="contact-ir.html" class="active">Contact IR</a>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Left: contact details -->
+      <div>
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Contact Details</span></div>
+        <h2 style="margin-bottom:36px;">Get in <em>Touch</em></h2>
+        <div class="contact-detail-block">
+          <div class="contact-detail-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <span class="cd-label">Investor Relations</span>
+              <span class="cd-val"><a href="mailto:ir@aflakholdings.com" style="color:var(--warm-white);text-decoration:none;">ir@aflakholdings.com</a></span>
+              <span class="cd-sub">For investment queries, partnership enquiries, and general IR</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <span class="cd-label">General Enquiries</span>
+              <span class="cd-val"><a href="mailto:enquiries@aflakholdings.com" style="color:var(--warm-white);text-decoration:none;">enquiries@aflakholdings.com</a></span>
+              <span class="cd-sub">For all other enquiries</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div>
+              <span class="cd-label">Telephone</span>
+              <span class="cd-val">+971 4 XXX XXXX</span>
+              <span class="cd-sub">Sunday–Thursday, 9:00am–6:00pm GST</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <span class="cd-label">Address</span>
+              <span class="cd-val">Aflak Holdings LLC</span>
+              <span class="cd-sub">Gate Avenue, DIFC, Dubai, UAE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="response-sla">
+          <h4>Our Response Commitment</h4>
+          <p>We commit to responding to all investor and stakeholder enquiries within two business days. For urgent matters, please include "URGENT" in your subject line and we will prioritise accordingly.</p>
+        </div>
+
+        <div class="enquiry-types" style="margin-top:36px;">
+          <p style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">We Handle Enquiries About</p>
+          <div class="enquiry-type"><div class="et-diamond"></div><div class="et-text"><strong>Investment opportunities</strong> — prospective co-investment or partnership enquiries</div></div>
+          <div class="enquiry-type"><div class="et-diamond"></div><div class="et-text"><strong>Annual Reports & financials</strong> — current and future financial disclosures</div></div>
+          <div class="enquiry-type"><div class="et-diamond"></div><div class="et-text"><strong>Governance & compliance</strong> — regulatory status, policies, and documentation requests</div></div>
+          <div class="enquiry-type"><div class="et-diamond"></div><div class="et-text"><strong>Media & press</strong> — enquiries from journalists and publications</div></div>
+          <div class="enquiry-type"><div class="et-diamond"></div><div class="et-text"><strong>ESG & sustainability</strong> — questions about our environmental and social commitments</div></div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div>
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Send a Message</span></div>
+        <h2 style="margin-bottom:36px;">Write to <em>Us</em></h2>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Your first name"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Your last name"></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="name@organisation.com"></div>
+        <div class="form-group"><label>Organisation</label><input type="text" placeholder="Your company or institution"></div>
+        <div class="form-group">
+          <label>Nature of Enquiry</label>
+          <select>
+            <option value="">Select the nature of your enquiry</option>
+            <option>Investment Partnership / Co-investment</option>
+            <option>Annual Reports & Financial Information</option>
+            <option>Governance & Compliance</option>
+            <option>ESG & Sustainability</option>
+            <option>Media & Press</option>
+            <option>General Investor Enquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Your Message</label><textarea placeholder="Please describe your enquiry in as much detail as helpful. We will respond within two business days."></textarea></div>
+        <button class="form-submit" type="button">
+          Send Message
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+        <p style="font-size:11px;color:rgba(245,242,237,.25);margin-top:16px;line-height:1.6;">By submitting this form you consent to Aflak Holdings retaining your contact information for the purpose of responding to your enquiry, in accordance with our Data Protection Policy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

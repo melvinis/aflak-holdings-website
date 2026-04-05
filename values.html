@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Values — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .value-full {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    align-items: start;
+    padding: 64px 0;
+    border-bottom: 1px solid rgba(184,151,106,0.1);
+  }
+  .value-full:last-child { border-bottom: none; }
+  .value-full-num {
+    font-family: var(--serif);
+    font-size: 100px;
+    font-weight: 300;
+    color: rgba(184,151,106,0.1);
+    line-height: 1;
+    text-align: right;
+  }
+  .value-full-content h3 { font-family: var(--serif); font-size: 36px; font-weight: 300; margin-bottom: 20px; color: var(--warm-white); }
+  .value-full-content h3 em { font-style: italic; color: var(--gold-light); }
+  .value-full-content p { font-size: 15px; color: rgba(245,242,237,.5); line-height: 1.9; margin-bottom: 16px; max-width: 680px; }
+  .value-full-content p:last-child { margin-bottom: 0; }
+  .value-behaviours { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .behaviour { display: flex; gap: 14px; align-items: flex-start; }
+  .behaviour-dot { width: 6px; height: 6px; border: 1px solid var(--gold); transform: rotate(45deg); flex-shrink: 0; margin-top: 7px; }
+  .behaviour-text { font-size: 13px; color: rgba(245,242,237,.55); line-height: 1.6; }
+
+  .values-manifesto {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,0.12);
+    padding: 80px;
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .values-manifesto::before { content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent); }
+  .manifesto-text { font-family: var(--serif); font-size: clamp(22px,3vw,36px); font-style: italic; font-weight: 300; line-height: 1.5; color: var(--cream); max-width: 800px; margin: 0 auto; }
+
+  @media(max-width:768px){ .value-full{grid-template-columns:1fr;} .value-full-num{text-align:left;font-size:60px;} .values-manifesto{padding:48px 32px;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner full">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Our Values</span></div>
+      <h1>The Principles<br>That <em>Define Us</em></h1>
+      <p class="page-hero-desc">Values are not aspirations. They are commitments — the standards by which we make decisions, build relationships, and measure success. At Aflak Holdings, our four founding principles are non-negotiable.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="value-full fade-in">
+      <div class="value-full-num">01</div>
+      <div class="value-full-content">
+        <h3><em>Integrity</em> in Every Decision</h3>
+        <p>Integrity is the foundation of everything we do. It means being honest about what we know and what we don't, being transparent with our clients and partners about risks as well as opportunities, and holding ourselves accountable when things don't go as planned.</p>
+        <p>In a financial environment where complexity can sometimes obscure accountability, we choose clarity. We say what we mean, we do what we say, and we never put a deal ahead of a relationship.</p>
+        <div class="value-behaviours">
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Full transparency with clients on fees, risks, and material conflicts of interest</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Compliance-first governance embedded in every process from day one</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Accountability at leadership level — no deflection, no externalising of responsibility</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="value-full fade-in">
+      <div class="value-full-num">02</div>
+      <div class="value-full-content">
+        <h3>Thinking for <em>Longevity</em></h3>
+        <p>We think in decades, not quarters. This is not merely a strategic posture — it is a practical discipline. The best investments are rarely the most exciting ones. They are the ones where the underlying thesis is sound, the governance is robust, and the patience is genuine.</p>
+        <p>Longevity thinking means we are willing to pass on opportunities that do not meet our standards, even under pressure. It means we build relationships before we build transactions. And it means we measure our success by the compounding of trust over time, not just capital.</p>
+        <div class="value-behaviours">
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Investment horizons measured in years, not months</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Partnership structures designed to align incentives across the full cycle</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">No short-term decisions that compromise long-term institutional credibility</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="value-full fade-in">
+      <div class="value-full-num">03</div>
+      <div class="value-full-content">
+        <h3>An Uncompromising<br>Standard of <em>Excellence</em></h3>
+        <p>Excellence is not a destination — it is a habit. At Aflak Holdings, it shows up in the rigour of our analysis, the quality of our communication, the care we bring to structuring deals, and the standards we expect of ourselves and those we work with.</p>
+        <p>We are a small, focused team precisely because excellence at scale requires discipline in scope. We would rather do three things extraordinarily well than ten things adequately.</p>
+        <div class="value-behaviours">
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Analytical rigour applied to every investment decision, regardless of size</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Clear, thoughtful communication with all stakeholders at all times</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Only partnering with operators and managers who share our standards</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="value-full fade-in">
+      <div class="value-full-num">04</div>
+      <div class="value-full-content">
+        <h3>Building a <em>Legacy</em></h3>
+        <p>Legacy is the natural result of doing the first three things well, consistently, over time. We are a new company, and we are under no illusions about what it takes to earn a reputation in this industry. It takes years of consistent behaviour, not a single impressive deal.</p>
+        <p>Every relationship we build, every investment we make, and every standard we uphold today is a brick in the institution Aflak Holdings will become. We take that responsibility seriously — not out of pride, but out of genuine commitment to the clients, communities, and colleagues who will one day look back at what we built.</p>
+        <div class="value-behaviours">
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Decisions made with reference to the institution we intend to become</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Investing in people and relationships as much as assets</div></div>
+          <div class="behaviour"><div class="behaviour-dot"></div><div class="behaviour-text">Leaving every engagement — with clients, partners, and regulators — better than we found it</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--off-black);padding:0;">
+  <div class="values-manifesto">
+    <p class="manifesto-text">"We are not building on the past. We are building the foundation others will build upon."</p>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

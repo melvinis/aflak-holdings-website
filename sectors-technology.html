@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .sector-nav { display:flex;gap:2px;margin-bottom:80px; }
+  .sector-nav a { padding:12px 24px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--charcoal);color:rgba(245,242,237,.5);transition:all .3s;border:1px solid transparent; }
+  .sector-nav a.active,.sector-nav a:hover { color:var(--gold);border-color:rgba(184,151,106,.3); }
+
+  .thesis-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px; }
+  .thesis-card { background:var(--charcoal);padding:44px 36px;border-bottom:2px solid transparent;transition:border-color .3s; }
+  .thesis-card:hover { border-color:var(--gold); }
+  .thesis-icon { width:44px;height:44px;border:1px solid rgba(184,151,106,.3);display:flex;align-items:center;justify-content:center;margin-bottom:24px; }
+  .thesis-icon svg { width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+  .thesis-title { font-family:var(--serif);font-size:20px;font-weight:400;color:var(--warm-white);margin-bottom:12px; }
+  .thesis-desc { font-size:13px;color:rgba(245,242,237,.45);line-height:1.8; }
+
+  .tech-capabilities { display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:60px; }
+  .tech-cap { background:var(--off-black);border:1px solid rgba(184,151,106,.08);padding:36px;transition:border-color .3s; }
+  .tech-cap:hover { border-color:rgba(184,151,106,.25); }
+  .tech-cap h4 { font-family:var(--serif);font-size:18px;font-weight:400;color:var(--warm-white);margin-bottom:10px; }
+  .tech-cap p { font-size:13px;color:rgba(245,242,237,.45);line-height:1.75; }
+  .tech-cap-tag { display:inline-block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(184,151,106,.25);padding:4px 10px;margin-bottom:14px; }
+
+  .criteria-list { display:flex;flex-direction:column;gap:0;border:1px solid rgba(184,151,106,.1); }
+  .criteria-item { display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 36px;border-bottom:1px solid rgba(184,151,106,.08);align-items:start; }
+  .criteria-item:last-child { border-bottom:none; }
+  .criteria-label { font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding-top:2px; }
+  .criteria-text { font-size:14px;color:rgba(245,242,237,.55);line-height:1.75; }
+
+  @media(max-width:1024px){ .thesis-grid{grid-template-columns:1fr 1fr;} .tech-capabilities{grid-template-columns:1fr;} .criteria-item{grid-template-columns:1fr;gap:8px;} }
+  @media(max-width:768px){ .thesis-grid{grid-template-columns:1fr;} .sector-nav{flex-wrap:wrap;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Sectors — Technology</span></div>
+      <h1>Technology<br>That <em>Creates Value</em></h1>
+      <p class="page-hero-desc">We back founders building the financial and commercial infrastructure of tomorrow — with capital, expertise, and the kind of operational partnership that only comes from having built these systems from the inside.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>Our technology thesis is grounded in a simple conviction: the best technology investments are those where we understand the problem being solved as deeply as the founders solving it. With Melvine Mathews's background in AI, fintech platform architecture, and quantitative systems, we are not passive capital in this space — we are genuine value-add partners.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="sector-nav">
+      <a href="sectors-realestate.html">Real Estate</a>
+      <a href="sectors-financial.html">Financial Services</a>
+      <a href="sectors-technology.html" class="active">Technology</a>
+    </div>
+
+    <div class="prose-grid wide">
+      <div>
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Thesis</span></div>
+        <h2>Backing Founders Who<br>Build <em>Better Finance</em></h2>
+        <div class="prose" style="margin-top:24px;">
+          <p>Technology is transforming financial services, real estate, and every sector in between. But the most impactful technology investments are not simply bets on a trend — they are bets on a specific team solving a specific problem in a specific market, with a genuine structural advantage.</p>
+          <p>At Aflak Holdings, we focus our technology investment activity on three intersecting areas: fintech and financial infrastructure, AI-enabled investment platforms, and real estate technology. These are sectors where we have firsthand operational knowledge — where we have built the systems, managed the teams, and understand the economics from the inside.</p>
+          <p>We are patient capital in the truest sense. We are not looking to exit in 18 months. We are looking to back exceptional founders over the long term, providing not just capital but genuine strategic support: product insight, regulatory navigation, client network access, and technical depth.</p>
+        </div>
+      </div>
+      <div style="background:var(--charcoal);border:1px solid rgba(184,151,106,.1);padding:48px;">
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Why We Can Add Value</span></div>
+        <p style="font-size:14px;color:rgba(245,242,237,.5);line-height:1.85;margin-bottom:20px;">Melvine Mathews has personally designed and implemented:</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:7px;"></div><span style="font-size:13px;color:rgba(245,242,237,.55);">A Next Best Offer engine increasing cross-sell ratios by 30%</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:7px;"></div><span style="font-size:13px;color:rgba(245,242,237,.55);">A unified digital onboarding journey achieving 85% digital NTB processing</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:7px;"></div><span style="font-size:13px;color:rgba(245,242,237,.55);">AI-enabled CRM and trading intelligence platforms at institutional scale</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:7px;"></div><span style="font-size:13px;color:rgba(245,242,237,.55);">Delta-neutral DeFi yield strategies with on-chain AML screening</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:7px;"></div><span style="font-size:13px;color:rgba(245,242,237,.55);">ML-based portfolio modelling driving 25% uplift in campaign ROI</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Investment Themes</span></div>
+    <h2>Where We See<br><em>Opportunity</em></h2>
+    <div class="thesis-grid">
+      <div class="thesis-card">
+        <div class="thesis-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+        <div class="thesis-title">Fintech & Embedded Finance</div>
+        <p class="thesis-desc">Platforms that embed financial services into non-financial applications, democratise access to credit and investment, or reduce the friction and cost of financial intermediation — particularly for SMEs and underserved segments in the MENA region.</p>
+      </div>
+      <div class="thesis-card">
+        <div class="thesis-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="thesis-title">AI-Driven Investment Intelligence</div>
+        <p class="thesis-desc">Tools and platforms that apply machine learning and predictive analytics to investment decision-making, portfolio management, and client intelligence — giving wealth managers and investors a meaningful analytical edge.</p>
+      </div>
+      <div class="thesis-card">
+        <div class="thesis-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div class="thesis-title">Real Estate Technology</div>
+        <p class="thesis-desc">PropTech platforms that improve the efficiency, transparency, or sustainability of real estate — from digital transaction platforms to building management systems to data analytics tools for developers and investors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Technical Capabilities</span></div>
+    <h2>We Don't Just<br>Fund — We <em>Build</em></h2>
+    <div class="tech-capabilities">
+      <div class="tech-cap"><span class="tech-cap-tag">AI & Machine Learning</span><h4>Predictive Analytics & ML Modelling</h4><p>Python, R, regression, clustering, and ML data modelling applied to financial services — from portfolio segmentation to risk scoring to client propensity modelling.</p></div>
+      <div class="tech-cap"><span class="tech-cap-tag">Blockchain</span><h4>Smart Contracts & DeFi Infrastructure</h4><p>Solidity smart contract development, on-chain AML screening, wallet risk scoring, tokenisation roadmaps, and deep knowledge of DeFi protocol mechanics including Hyperliquid, Kamino, and Ethena.</p></div>
+      <div class="tech-cap"><span class="tech-cap-tag">Digital Platforms</span><h4>Platform Architecture & Development</h4><p>React JS-based frontend development, digital onboarding journey design, CRM and trading intelligence platform architecture, and multi-custodian portfolio aggregation systems.</p></div>
+      <div class="tech-cap"><span class="tech-cap-tag">Quantitative Finance</span><h4>Systematic Strategy Development</h4><p>Architecture and development of quantitative investment strategies, including delta-neutral funding rate arbitrage and institutional-grade digital asset trading infrastructure with backtesting frameworks.</p></div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

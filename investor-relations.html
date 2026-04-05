@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Relations — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .ir-nav { display:flex;gap:2px;margin-bottom:72px;flex-wrap:wrap; }
+  .ir-nav a { padding:12px 24px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--charcoal);color:rgba(245,242,237,.5);transition:all .3s;border:1px solid transparent; }
+  .ir-nav a.active,.ir-nav a:hover { color:var(--gold);border-color:rgba(184,151,106,.3); }
+
+  .ir-pillars { display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:60px; }
+  .ir-pillar { background:var(--charcoal);padding:40px 32px;text-align:center;border-bottom:2px solid transparent;transition:border-color .3s;text-decoration:none;display:block; }
+  .ir-pillar:hover { border-color:var(--gold); }
+  .ir-pillar-icon { width:48px;height:48px;border:1px solid rgba(184,151,106,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 20px; }
+  .ir-pillar-icon svg { width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+  .ir-pillar-title { font-family:var(--serif);font-size:18px;font-weight:400;color:var(--warm-white);margin-bottom:10px; }
+  .ir-pillar-desc { font-size:12px;color:rgba(245,242,237,.4);line-height:1.75; }
+
+  .ir-highlight {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,.12);
+    padding: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 60px;
+  }
+  .ir-highlight h3 { font-family:var(--serif);font-size:30px;font-weight:300;margin-bottom:16px; }
+  .ir-highlight h3 em { font-style:italic;color:var(--gold-light); }
+  .ir-highlight p { font-size:14px;color:rgba(245,242,237,.5);line-height:1.85; }
+  .ir-facts { display:flex;flex-direction:column;gap:16px; }
+  .ir-fact { display:flex;gap:16px;align-items:flex-start;padding:16px 20px;background:var(--off-black);border:1px solid rgba(184,151,106,.08); }
+  .ir-fact-label { font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);flex-shrink:0;width:120px;padding-top:2px; }
+  .ir-fact-val { font-size:13px;color:rgba(245,242,237,.65);line-height:1.5; }
+
+  @media(max-width:1024px){ .ir-pillars{grid-template-columns:1fr 1fr;} .ir-highlight{grid-template-columns:1fr;padding:40px;} }
+  @media(max-width:768px){ .ir-pillars{grid-template-columns:1fr 1fr;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Investor Relations</span></div>
+      <h1>Transparent.<br>Accountable.<br><em>Committed.</em></h1>
+      <p class="page-hero-desc">At Aflak Holdings, investor relations is not a department — it is a disposition. We believe that the people who entrust us with their capital deserve clear, honest, and timely communication at all times.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>As a newly established group, we are laying the groundwork for an investor relations programme that reflects the highest standards of disclosure and stakeholder communication. Our commitment to transparency begins before we have assets to report — because the culture of disclosure starts at founding, not at scale.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="ir-nav">
+      <a href="investor-relations.html" class="active">Overview</a>
+      <a href="annual-reports.html">Annual Reports</a>
+      <a href="governance.html">Governance</a>
+      <a href="contact-ir.html">Contact IR</a>
+    </div>
+
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>IR Resources</span></div>
+    <h2>Everything You Need<br>to <em>Understand Aflak</em></h2>
+    <div class="ir-pillars">
+      <a href="annual-reports.html" class="ir-pillar">
+        <div class="ir-pillar-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="ir-pillar-title">Annual Reports</div>
+        <p class="ir-pillar-desc">Financial statements and performance disclosures. First report due at end of financial year 2026.</p>
+      </a>
+      <a href="governance.html" class="ir-pillar">
+        <div class="ir-pillar-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="ir-pillar-title">Governance</div>
+        <p class="ir-pillar-desc">Board composition, oversight framework, regulatory compliance, and internal controls.</p>
+      </a>
+      <a href="sustainability.html" class="ir-pillar">
+        <div class="ir-pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+        <div class="ir-pillar-title">ESG & Sustainability</div>
+        <p class="ir-pillar-desc">Our environmental, social, and governance framework and commitments.</p>
+      </a>
+      <a href="contact-ir.html" class="ir-pillar">
+        <div class="ir-pillar-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="ir-pillar-title">Contact IR</div>
+        <p class="ir-pillar-desc">Get in touch directly with our investor relations function.</p>
+      </a>
+    </div>
+
+    <div class="ir-highlight">
+      <div>
+        <h3>Our Commitment<br>to <em>Stakeholders</em></h3>
+        <p>We will communicate proactively and honestly with all stakeholders — not just when things are going well, but especially when they are not. We will publish our annual financial statements within 90 days of each financial year end. We will respond to investor enquiries within two business days.</p>
+        <p style="margin-top:16px;">These are not aspirations. They are commitments.</p>
+        <a href="contact-ir.html" class="btn-primary" style="margin-top:28px;display:inline-flex;">Contact Investor Relations</a>
+      </div>
+      <div class="ir-facts">
+        <div class="ir-fact"><span class="ir-fact-label">Established</span><span class="ir-fact-val">2026, DIFC, Dubai, UAE</span></div>
+        <div class="ir-fact"><span class="ir-fact-label">Legal Structure</span><span class="ir-fact-val">Aflak Holdings LLC, registered in the DIFC</span></div>
+        <div class="ir-fact"><span class="ir-fact-label">Regulator</span><span class="ir-fact-val">Dubai Financial Services Authority (DFSA)</span></div>
+        <div class="ir-fact"><span class="ir-fact-label">Financial Year</span><span class="ir-fact-val">January 1 – December 31</span></div>
+        <div class="ir-fact"><span class="ir-fact-label">First Report</span><span class="ir-fact-val">Annual Report to be published Q1 2027</span></div>
+        <div class="ir-fact"><span class="ir-fact-label">IR Contact</span><span class="ir-fact-val">ir@aflakholdings.com</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

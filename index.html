@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aflak Holdings — Building Tomorrow's Legacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #B8976A;
+    --gold-light: #D4B896;
+    --gold-dark: #8A6E4A;
+    --obsidian: #0A0A0A;
+    --off-black: #111111;
+    --charcoal: #1C1C1C;
+    --slate: #2A2A2A;
+    --warm-white: #F5F2ED;
+    --cream: #EDE9E1;
+    --muted: #888680;
+    --text-secondary: #5A5855;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --nav-height: 80px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--obsidian);
+    color: var(--warm-white);
+    font-family: var(--sans);
+    font-weight: 300;
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  /* ====== CURSOR ====== */
+  .cursor {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, opacity 0.3s;
+    mix-blend-mode: normal;
+  }
+  .cursor-ring {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(184,151,106,0.4);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.4s cubic-bezier(0.23,1,0.32,1), opacity 0.3s;
+  }
+
+  /* ====== NAV ====== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    z-index: 1000;
+    transition: background 0.6s ease, border-bottom 0.6s ease;
+  }
+  nav.scrolled {
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(184,151,106,0.15);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--warm-white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .nav-logo-mark {
+    width: 32px; height: 32px;
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+  .nav-logo-mark span {
+    transform: rotate(-45deg);
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .nav-links {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,242,237,0.6);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--warm-white); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid rgba(184,151,106,0.4);
+    padding: 10px 24px;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--obsidian);
+    border-color: var(--gold);
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 60px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(184,151,106,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 30% 80%, rgba(184,151,106,0.04) 0%, transparent 50%);
+  }
+
+  .hero-grid-lines {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(245,242,237,1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,242,237,1) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1.2s cubic-bezier(0.23,1,0.32,1) both;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .hero-eyebrow-line {
+    width: 40px; height: 1px;
+    background: var(--gold);
+  }
+  .hero-eyebrow span {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+    color: var(--warm-white);
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: rgba(245,242,237,0.55);
+    max-width: 480px;
+    margin-bottom: 56px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--gold);
+    color: var(--obsidian);
+    padding: 16px 36px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .btn-primary:hover::before { transform: translateX(0); }
+  .btn-primary svg { transition: transform 0.3s; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(245,242,237,0.6);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .btn-ghost:hover { color: var(--warm-white); }
+
+  .hero-stat-strip {
+    position: absolute;
+    bottom: 60px; right: 60px;
+    display: flex;
+    gap: 48px;
+    z-index: 2;
+    animation: fadeUp 1.4s cubic-bezier(0.23,1,0.32,1) 0.2s both;
+  }
+  .hero-stat {
+    text-align: right;
+  }
+  .hero-stat-number {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--warm-white);
+    display: block;
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .hero-scroll-indicator {
+    position: absolute;
+    bottom: 60px; left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+    animation: fadeUp 1.4s cubic-bezier(0.23,1,0.32,1) 0.3s both;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(184,151,106,0.6), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  .scroll-text {
+    writing-mode: vertical-rl;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transform: rotate(180deg);
+  }
+
+  /* ====== DIVIDER ====== */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 60px;
+    margin: 0;
+  }
+  .divider-line { flex: 1; height: 1px; background: rgba(184,151,106,0.2); }
+  .divider-diamond {
+    width: 8px; height: 8px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  /* ====== SECTION BASE ====== */
+  section { padding: 120px 60px; }
+
+  .section-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .section-eyebrow-line { width: 32px; height: 1px; background: var(--gold); }
+  .section-eyebrow span {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  h2 em { font-style: italic; color: var(--gold-light); }
+
+  h3 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  /* ====== ABOUT / PHILOSOPHY ====== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-text h2 { margin-bottom: 28px; }
+
+  .about-text p {
+    color: rgba(245,242,237,0.55);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .philosophy-card {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,0.12);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .philosophy-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .philosophy-quote {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+  .philosophy-attr {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .philosophy-bg-char {
+    position: absolute;
+    bottom: -20px; right: -10px;
+    font-family: var(--serif);
+    font-size: 200px;
+    color: rgba(184,151,106,0.04);
+    line-height: 1;
+    pointer-events: none;
+    select: none;
+  }
+
+  /* ====== SECTORS / PORTFOLIO ====== */
+  .sectors { background: var(--off-black); }
+
+  .sectors-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+  }
+  .sectors-header p {
+    color: rgba(245,242,237,0.5);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sector-card {
+    background: var(--charcoal);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+  }
+  .sector-card:hover { background: var(--slate); }
+  .sector-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+  .sector-card:hover::after { width: 100%; }
+
+  .sector-num {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    margin-bottom: 32px;
+    display: block;
+  }
+
+  .sector-icon {
+    width: 48px; height: 48px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .sector-icon-shape {
+    width: 48px; height: 48px;
+    border: 1px solid rgba(184,151,106,0.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sector-icon-shape svg {
+    width: 22px; height: 22px;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .sector-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 12px;
+    flex: 1;
+  }
+  .sector-desc {
+    font-size: 13px;
+    color: rgba(245,242,237,0.4);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .sector-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .sector-card:hover .sector-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ====== NUMBERS / IMPACT ====== */
+  .numbers { background: var(--charcoal); }
+
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    border: 1px solid rgba(184,151,106,0.1);
+  }
+  .number-item {
+    padding: 60px 40px;
+    border-right: 1px solid rgba(184,151,106,0.1);
+    position: relative;
+  }
+  .number-item:last-child { border-right: none; }
+  .number-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.6s ease;
+  }
+  .number-item.in-view::before { width: 100%; }
+
+  .number-val {
+    font-family: var(--serif);
+    font-size: clamp(44px, 4vw, 64px);
+    font-weight: 300;
+    color: var(--warm-white);
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .number-suffix {
+    color: var(--gold);
+    font-size: 0.7em;
+  }
+  .number-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+  }
+
+  /* ====== LEADERSHIP ====== */
+  .leadership-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+  }
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .leader-card {
+    background: var(--off-black);
+    padding: 0;
+    border: 1px solid rgba(184,151,106,0.08);
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .leader-card-body {
+    padding: 28px 32px 32px;
+  }
+  .leader-card:hover {
+    border-color: rgba(184,151,106,0.3);
+    transform: translateY(-4px);
+  }
+
+  .leader-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin-bottom: 32px;
+    filter: grayscale(20%);
+    transition: filter 0.4s ease;
+  }
+  .leader-card:hover .leader-photo { filter: grayscale(0%); }
+  .leader-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 6px;
+  }
+  .leader-title {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .leader-bio {
+    font-size: 13px;
+    color: rgba(245,242,237,0.4);
+    line-height: 1.7;
+  }
+
+  /* ====== VALUES ====== */
+  .values { background: var(--off-black); }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+  }
+  .value-item {
+    padding: 0;
+    position: relative;
+  }
+  .value-number {
+    font-family: var(--serif);
+    font-size: 80px;
+    font-weight: 300;
+    color: rgba(184,151,106,0.08);
+    line-height: 1;
+    position: absolute;
+    top: -10px; right: 0;
+  }
+  .value-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 12px;
+    margin-top: 48px;
+  }
+  .value-desc {
+    font-size: 13px;
+    color: rgba(245,242,237,0.45);
+    line-height: 1.8;
+  }
+
+  /* ====== NEWS ====== */
+  .news-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+  }
+  .news-card {
+    background: var(--off-black);
+    padding: 40px;
+    border: 1px solid rgba(184,151,106,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s;
+  }
+  .news-card:hover { border-color: rgba(184,151,106,0.25); }
+  .news-card.featured { background: var(--charcoal); }
+  .news-tag {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid rgba(184,151,106,0.25);
+    display: inline-block;
+    width: fit-content;
+  }
+  .news-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--warm-white);
+    line-height: 1.35;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .news-card.featured .news-title {
+    font-size: 26px;
+  }
+  .news-excerpt {
+    font-size: 13px;
+    color: rgba(245,242,237,0.4);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .news-date {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* ====== CONTACT ====== */
+  .contact { background: var(--charcoal); }
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+  }
+  .contact-info h2 { margin-bottom: 24px; }
+  .contact-info p {
+    color: rgba(245,242,237,0.5);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .contact-detail {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .contact-detail-icon {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(184,151,106,0.2);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-detail-icon svg {
+    width: 14px; height: 14px;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .contact-detail-label {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .contact-detail-val {
+    font-size: 14px;
+    color: var(--warm-white);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-group label {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: var(--off-black);
+    border: 1px solid rgba(184,151,106,0.15);
+    color: var(--warm-white);
+    padding: 14px 18px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+  .form-group select option { background: var(--charcoal); }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: rgba(184,151,106,0.5);
+  }
+  .form-group textarea {
+    resize: none;
+    height: 120px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .form-submit {
+    background: var(--gold);
+    border: none;
+    color: var(--obsidian);
+    padding: 16px 40px;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    position: relative;
+    overflow: hidden;
+  }
+  .form-submit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+  .form-submit:hover::before { transform: translateX(0); }
+
+  /* ====== FOOTER ====== */
+  footer {
+    background: var(--obsidian);
+    border-top: 1px solid rgba(184,151,106,0.1);
+    padding: 60px;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  .footer-brand p {
+    font-size: 13px;
+    color: rgba(245,242,237,0.35);
+    line-height: 1.8;
+    margin-top: 20px;
+    max-width: 280px;
+  }
+  .footer-col h4 {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-col ul a {
+    font-size: 13px;
+    color: rgba(245,242,237,0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: var(--warm-white); }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(184,151,106,0.08);
+  }
+  .footer-bottom p {
+    font-size: 11px;
+    color: rgba(245,242,237,0.25);
+    letter-spacing: 0.05em;
+  }
+  .footer-social {
+    display: flex;
+    gap: 20px;
+  }
+  .footer-social a {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(184,151,106,0.2);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .footer-social a:hover {
+    border-color: var(--gold);
+    background: rgba(184,151,106,0.1);
+  }
+  .footer-social svg {
+    width: 13px; height: 13px;
+    fill: rgba(245,242,237,0.5);
+  }
+  .footer-social a:hover svg { fill: var(--gold); }
+
+  /* ====== ANIMATIONS ====== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.hidden {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ====== MOBILE MENU TOGGLE ====== */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .nav-toggle span {
+    width: 24px; height: 1px;
+    background: var(--warm-white);
+    display: block;
+    transition: all 0.3s;
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 1024px) {
+    nav { padding: 0 32px; }
+    section { padding: 80px 32px; }
+    .hero { padding: 0 32px; }
+    .divider { padding: 0 32px; }
+    footer { padding: 60px 32px; }
+    .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+    .sectors-header, .sectors-grid, .values-grid { grid-template-columns: 1fr 1fr; }
+    .numbers-grid { grid-template-columns: 1fr 1fr; }
+    .leadership-grid { grid-template-columns: 1fr 1fr; }
+    .news-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .hero-stat-strip { display: none; }
+    .hero-scroll-indicator { display: none; }
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-toggle { display: flex; }
+    .sectors-grid, .values-grid, .numbers-grid, .leadership-grid, .news-grid { grid-template-columns: 1fr; }
+    .sectors-header { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Navigation -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark"><span>A</span></div>
+    Aflak Holdings
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="sectors-realestate.html">Sectors</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="investor-relations.html">Investors</a></li>
+    <li><a href="careers.html">Careers</a></li>
+  </ul>
+  <a href="contact-ir.html" class="nav-cta">Get in Touch</a>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span>Dubai, United Arab Emirates</span>
+    </div>
+    <h1>Building<br><em>Tomorrow's</em><br>Legacy</h1>
+    <p class="hero-desc">Aflak Holdings is a newly established investment group rooted in Dubai, built to cultivate enduring value across real estate, financial services, and technology.</p>
+    <div class="hero-actions">
+      <a href="#sectors" class="btn-primary">
+        Our Portfolio
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#about" class="btn-ghost">
+        <span>Our Philosophy</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-stat-strip">
+    <div class="hero-stat">
+      <span class="hero-stat-number">18<span class="number-suffix">+</span></span>
+      <span class="hero-stat-label">Years Combined Experience</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-number">DIFC</span>
+      <span class="hero-stat-label">Regulated, Dubai</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-number">3</span>
+      <span class="hero-stat-label">Core Focus Sectors</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-line"></div>
+    <div class="scroll-text">Scroll</div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-diamond"></div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- About / Philosophy -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span>Our Philosophy</span>
+      </div>
+      <h2>Capital with<br><em>Purpose</em></h2>
+      <p>Aflak Holdings is a newly established investment group, founded in Dubai by two senior professionals with decades of combined experience across banking, wealth management, and financial technology.</p>
+      <p>We are built on a straightforward conviction: that disciplined, research-driven investing — combined with deep client relationships and rigorous governance — creates lasting value. We begin with a focused mandate and the intention to grow deliberately.</p>
+      <p>Aflak is a starting point, not a legacy. Every decision we make today is made with tomorrow's institution in mind.</p>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="philosophy-card">
+        <p class="philosophy-quote">"We are not building on the past. We are building the foundation others will build upon."</p>
+        <span class="philosophy-attr">— The Aflak Investment Doctrine</span>
+        <div class="philosophy-bg-char">"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sectors -->
+<section id="sectors" class="sectors">
+  <div class="sectors-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span>Our Sectors</span>
+      </div>
+      <h2>Diversified<br><em>Excellence</em></h2>
+    </div>
+    <p>We are establishing a focused presence across three sectors where our founders bring direct expertise and where we see compelling long-term opportunity in the UAE and GCC.</p>
+  </div>
+
+  <div class="sectors-grid">
+    <!-- Real Estate -->
+    <div class="sector-card reveal">
+      <span class="sector-num">01</span>
+      <div class="sector-icon">
+        <div class="sector-icon-shape">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+      </div>
+      <div class="sector-name">Real Estate</div>
+      <div class="sector-desc">Premium residential, commercial, and mixed-use developments across the UAE and wider GCC, designed to define skylines and communities.</div>
+      <a href="#" class="sector-link">
+        Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Financial Services -->
+    <div class="sector-card reveal reveal-delay-1">
+      <span class="sector-num">02</span>
+      <div class="sector-icon">
+        <div class="sector-icon-shape">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+      </div>
+      <div class="sector-name">Financial Services</div>
+      <div class="sector-desc">Private equity, venture capital, and asset management platforms providing sophisticated capital solutions for growth-stage companies.</div>
+      <a href="#" class="sector-link">
+        Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Technology -->
+    <div class="sector-card reveal reveal-delay-2">
+      <span class="sector-num">03</span>
+      <div class="sector-icon">
+        <div class="sector-icon-shape">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+      </div>
+      <div class="sector-name">Technology</div>
+      <div class="sector-desc">Strategic investments in AI, fintech, and enterprise software — backing founders building the infrastructure of tomorrow's economy.</div>
+      <a href="#" class="sector-link">
+        Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Leadership -->
+<section id="leadership">
+  <div class="leadership-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span>Leadership</span>
+      </div>
+      <h2>Guided by<br><em>Vision</em></h2>
+    </div>
+  </div>
+  <div class="leadership-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px;">
+    <div class="leader-card reveal">
+      <img class="leader-photo" src="abdelqader.jpeg" alt="Abdelqader Al Kahloot">
+      <div class="leader-card-body">
+        <div class="leader-name">Abdelqader Al Kahloot</div>
+        <span class="leader-title">Co-Founder &amp; Senior Executive Officer</span>
+        <p class="leader-bio">18+ years across HNW wealth management and banking, including senior roles at Mashreq Bank, HSBC, and Standard Chartered. A specialist in building and leading high-performing client coverage teams across the UAE and GCC.</p>
+      </div>
+    </div>
+    <div class="leader-card reveal reveal-delay-1">
+      <img class="leader-photo" src="melvine.jpg" alt="Melvine Mathews">
+      <div class="leader-card-body">
+        <div class="leader-name">Melvine Mathews</div>
+        <span class="leader-title">Co-Founder &amp; Chief Principal</span>
+        <p class="leader-bio">25+ years spanning banking, financial technology, and investment management. A Chevening Scholar with an MBA from Lancaster University, he brings expertise in AI-driven portfolio intelligence, digital platforms, and quantitative investment strategy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="values">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-eyebrow reveal">
+      <div class="section-eyebrow-line"></div>
+      <span>Our Principles</span>
+    </div>
+    <h2 class="reveal">What<br>We <em>Stand For</em></h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-item reveal">
+      <div class="value-number">01</div>
+      <div class="value-title">Integrity</div>
+      <p class="value-desc">Every decision is anchored in transparency, ethical conduct, and accountability to our stakeholders, partners, and communities.</p>
+    </div>
+    <div class="value-item reveal reveal-delay-1">
+      <div class="value-number">02</div>
+      <div class="value-title">Longevity</div>
+      <p class="value-desc">We think in decades, not quarters. Sustainable value creation demands patience, discipline, and resistance to short-term pressures.</p>
+    </div>
+    <div class="value-item reveal reveal-delay-2">
+      <div class="value-number">03</div>
+      <div class="value-title">Excellence</div>
+      <p class="value-desc">We hold ourselves and our portfolio companies to the highest standards of operational and governance excellence at all times.</p>
+    </div>
+    <div class="value-item reveal reveal-delay-3">
+      <div class="value-number">04</div>
+      <div class="value-title">Legacy</div>
+      <p class="value-desc">We build not just for today's returns, but for the generations that will inherit the institutions and communities we shape.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span>Contact</span>
+      </div>
+      <h2>Let's Begin<br>a <em>Conversation</em></h2>
+      <p>Whether you are a prospective partner, an institutional investor, or a founder seeking a strategic ally — we welcome the dialogue.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <span class="contact-detail-label">Headquarters</span>
+            <span class="contact-detail-val">Gate Avenue, DIFC, Dubai, UAE</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <span class="contact-detail-label">Telephone</span>
+            <span class="contact-detail-val">+971 4 XXX XXXX</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <span class="contact-detail-label">General Enquiries</span>
+            <span class="contact-detail-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="27424956524e554e42546746414b464c4f484b434e4940540944484a">[email&#160;protected]</a></span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <span class="contact-detail-label">Investor Relations</span>
+            <span class="contact-detail-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="325b407253545e53595a5d5e565b5c55411c515d5f">[email&#160;protected]</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-1">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Ahmed">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Al Rashid">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="name@company.com">
+        </div>
+        <div class="form-group">
+          <label for="org">Organisation</label>
+          <input type="text" id="org" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+          <label for="inquiry">Nature of Enquiry</label>
+          <select id="inquiry">
+            <option value="">Select an area of interest</option>
+            <option>Investment Partnership</option>
+            <option>Investor Relations</option>
+            <option>Real Estate</option>
+            <option>Technology Ventures</option>
+            <option>Media &amp; Press</option>
+            <option>Careers</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Please share how we may assist you..."></textarea>
+        </div>
+        <button class="form-submit" type="button">
+          Send Message
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="margin-bottom:0;">
+        <div class="nav-logo-mark"><span>A</span></div>
+        Aflak Holdings
+      </a>
+      <p>A newly established investment group founded in Dubai by senior financial professionals, focused on real estate, financial services, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="values.html">Our Values</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sectors</h4>
+      <ul>
+        <li><a href="sectors-realestate.html">Real Estate</a></li>
+        <li><a href="sectors-financial.html">Financial Services</a></li>
+        <li><a href="sectors-technology.html">Technology</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Investors</h4>
+      <ul>
+        <li><a href="investor-relations.html">Investor Relations</a></li>
+        <li><a href="annual-reports.html">Annual Reports</a></li>
+        <li><a href="governance.html">Governance</a></li>
+        <li><a href="contact-ir.html">Contact IR</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Aflak Holdings LLC. All rights reserved. Registered in the DIFC, Dubai, UAE.</p>
+    <div class="footer-social">
+      <a href="#" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="#" aria-label="X / Twitter">
+        <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Custom Cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+  });
+  function animateRing() {
+    ringX += (mouseX - ringX - 16) * 0.12;
+    ringY += (mouseY - ringY - 16) * 0.12;
+    ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button, .sector-card, .leader-card, .news-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.transform += ' scale(2)'; ring.style.opacity = '0.5'; });
+    el.addEventListener('mouseleave', () => { cursor.style.transform = cursor.style.transform.replace(' scale(2)', ''); ring.style.opacity = '1'; });
+  });
+
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Scroll reveal — elements start visible, we add .hidden then remove it
+  const reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(el => el.classList.add('hidden'));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  // Small delay so the hidden class is applied before observing
+  setTimeout(() => reveals.forEach(el => observer.observe(el)), 50);
+
+  // Number items border animation
+  const numberItems = document.querySelectorAll('.number-item');
+  const numObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        numObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  numberItems.forEach(el => numObserver.observe(el));
+
+  // Form submit feedback
+  document.querySelector('.form-submit').addEventListener('click', function() {
+    const btn = this;
+    btn.textContent = 'Message Sent';
+    btn.style.background = '#4a7c59';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.innerHTML =

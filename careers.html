@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .why-card {
+    background: var(--charcoal);
+    padding: 44px 36px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .why-card:hover { border-color: var(--gold); }
+  .why-icon { width: 40px; height: 40px; border: 1px solid rgba(184,151,106,.3); display:flex;align-items:center;justify-content:center;margin-bottom:24px; }
+  .why-icon svg { width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+  .why-title { font-family:var(--serif);font-size:20px;font-weight:400;color:var(--warm-white);margin-bottom:12px; }
+  .why-desc { font-size:13px;color:rgba(245,242,237,.45);line-height:1.8; }
+
+  .openings-notice {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,.12);
+    padding: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .openings-notice::before { content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent); }
+  .openings-notice h3 { font-family:var(--serif);font-size:32px;font-weight:300;color:var(--warm-white);margin-bottom:16px; }
+  .openings-notice h3 em { font-style:italic;color:var(--gold-light); }
+  .openings-notice p { font-size:15px;color:rgba(245,242,237,.5);max-width:540px;margin:0 auto 36px;line-height:1.85; }
+
+  .culture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .culture-block h3 { font-family:var(--serif);font-size:28px;font-weight:300;margin-bottom:20px;color:var(--warm-white); }
+  .culture-block h3 em { font-style:italic;color:var(--gold-light); }
+  .culture-block p { font-size:14px;color:rgba(245,242,237,.5);line-height:1.9;margin-bottom:16px; }
+
+  .speculative-form {
+    background: var(--off-black);
+    border: 1px solid rgba(184,151,106,.1);
+    padding: 56px;
+    margin-top: 60px;
+  }
+  .speculative-form h3 { font-family:var(--serif);font-size:28px;font-weight:300;margin-bottom:8px;color:var(--warm-white); }
+  .speculative-form p { font-size:14px;color:rgba(245,242,237,.45);margin-bottom:36px;line-height:1.75; }
+
+  @media(max-width:1024px){ .why-grid{grid-template-columns:1fr 1fr;} .culture-grid{grid-template-columns:1fr;} }
+  @media(max-width:768px){ .why-grid{grid-template-columns:1fr;} .openings-notice{padding:48px 28px;} .speculative-form{padding:36px 28px;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Careers</span></div>
+      <h1>Build Something<br><em>That Lasts</em></h1>
+      <p class="page-hero-desc">Aflak Holdings is at the beginning of its story. We are looking for exceptional people who want to be part of building an institution — not just filling a role.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>We are a small, focused team and we intend to stay that way. Every person we bring in will have genuine scope, genuine responsibility, and a genuine voice in how we grow. We are not looking for executors of instructions — we are looking for thinkers and builders.</p>
+      <p style="margin-top:20px;">If you are exceptional at what you do, share our values, and believe that finance can be practised with both rigour and integrity, we want to hear from you.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Why Aflak -->
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Why Aflak</span></div>
+    <h2>What Makes This<br><em>Different</em></h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="why-title">Founding Moment</div>
+        <p class="why-desc">Joining a company at its inception is rare. The decisions made in these early years will shape everything that follows. You will be part of those decisions, not a passive observer of them.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        </div>
+        <div class="why-title">Real Scope</div>
+        <p class="why-desc">In a small team, there is nowhere to hide — and everywhere to grow. You will do meaningful work from day one, with direct exposure to senior decision-making and real investment responsibility.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="why-title">Values-Led Culture</div>
+        <p class="why-desc">Our values are not a poster on a wall. They are the basis on which we hire, promote, and part ways. Integrity, longevity, excellence, and legacy are the standards we hold ourselves to every day.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="why-title">Learning at Depth</div>
+        <p class="why-desc">Our founders bring combined expertise spanning HNW wealth management, AI-driven analytics, fintech, and cross-border investment. Working alongside them is an exceptional development opportunity.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div class="why-title">DIFC Environment</div>
+        <p class="why-desc">Working from Gate Avenue in the DIFC places you at the centre of one of the world's leading international financial centres, with the professional network and regulatory environment that entails.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="why-title">Competitive Reward</div>
+        <p class="why-desc">We believe that excellent work deserves excellent compensation. We offer competitive packages with a structure designed to align your success with the long-term performance of the Group.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Current openings -->
+<section>
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Current Openings</span></div>
+    <h2>Roles We Are<br><em>Building Towards</em></h2>
+    <div class="openings-notice" style="margin-top:60px;">
+      <h3>No Formal Openings<br><em>At This Time</em></h3>
+      <p>Aflak Holdings was founded in 2026 and we are in the earliest stage of building our team. We do not have formal open roles at this time — but we are always interested in meeting exceptional people who share our values and our ambition.</p>
+      <p style="color:rgba(245,242,237,.4);font-size:13px;margin-top:-8px;">If that is you, please use the speculative application form below.</p>
+      <a href="#speculative" class="btn-primary" style="display:inline-flex;">Submit Speculative Application</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Culture -->
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Culture</span></div>
+    <h2 style="margin-bottom:48px;">How We <em>Work</em></h2>
+    <div class="culture-grid">
+      <div class="culture-block">
+        <h3>Small by <em>Design</em></h3>
+        <p>We are intentionally small. We believe that a small team of exceptional people, working with clarity of purpose and genuine trust in one another, outperforms a large team of adequate people every time. We do not intend to grow for growth's sake.</p>
+        <p>This means every voice matters. Disagreement is welcome. The best idea wins, regardless of seniority. And everyone is expected to bring their whole professional self to what we are building.</p>
+      </div>
+      <div class="culture-block">
+        <h3>Rigorous and <em>Human</em></h3>
+        <p>We hold very high standards for the quality of our work — the rigour of our analysis, the clarity of our communication, the care of our client relationships. But we are also human. We understand that great work requires rest, perspective, and a life outside the office.</p>
+        <p>We do not confuse long hours with high performance. We value output and judgment over visibility and activity. We expect results, and we give people the space and trust to deliver them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Speculative Application -->
+<section id="speculative">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Speculative Application</span></div>
+    <h2>Make Yourself<br><em>Known</em></h2>
+    <div class="speculative-form">
+      <h3>Tell Us About Yourself</h3>
+      <p>Even without a specific role to apply for, we welcome speculative applications from outstanding candidates. If you believe you could contribute to what we are building, we want to hear from you.</p>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Your first name"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Your last name"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="name@example.com"></div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+971 XX XXX XXXX"></div>
+      </div>
+      <div class="form-group">
+        <label>Area of Expertise</label>
+        <select>
+          <option value="">Select your primary discipline</option>
+          <option>Investment & Portfolio Management</option>
+          <option>Wealth Management & Client Relations</option>
+          <option>Financial Technology & Analytics</option>
+          <option>Real Estate & Asset Management</option>
+          <option>Compliance, Risk & Legal</option>
+          <option>Operations & Finance</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Why Aflak Holdings?</label>
+        <textarea placeholder="Tell us about your background and why you think you would be a strong addition to our team..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>LinkedIn Profile or CV URL</label>
+        <input type="url" placeholder="https://linkedin.com/in/yourprofile">
+      </div>
+      <button class="form-submit" type="button">
+        Submit Application
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

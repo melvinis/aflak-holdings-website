@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .leader-section {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 80px;
+    align-items: start;
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(184,151,106,0.1);
+  }
+  .leader-section:last-child { border-bottom: none; padding-bottom: 0; }
+  .leader-section.reverse { grid-template-columns: 1fr 380px; }
+  .leader-section.reverse .leader-photo-wrap { order: 2; }
+  .leader-section.reverse .leader-content { order: 1; }
+
+  .leader-photo-wrap {
+    position: relative;
+  }
+  .leader-photo-wrap img {
+    width: 100%;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter 0.5s;
+  }
+  .leader-photo-wrap:hover img { filter: grayscale(0%); }
+  .leader-photo-accent {
+    position: absolute;
+    bottom: -12px; right: -12px;
+    width: 60px; height: 60px;
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    background: var(--obsidian);
+  }
+  .leader-photo-accent svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  .leader-content { padding-top: 8px; }
+  .leader-content h2 { font-family: var(--serif); font-size: 40px; font-weight: 300; margin-bottom: 6px; }
+  .leader-role { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 32px; }
+
+  .leader-bio-block { margin-bottom: 32px; }
+  .leader-bio-block p { font-size: 15px; color: rgba(245,242,237,.5); line-height: 1.9; margin-bottom: 16px; }
+
+  .leader-credentials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .cred-item {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,0.1);
+    padding: 20px 24px;
+  }
+  .cred-label { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; display: block; }
+  .cred-val { font-size: 13px; color: rgba(245,242,237,.7); line-height: 1.5; }
+
+  .expertise-list { margin-top: 36px; }
+  .expertise-label { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+  .expertise-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .expertise-tag {
+    font-size: 11px;
+    color: rgba(245,242,237,.6);
+    border: 1px solid rgba(184,151,106,.2);
+    padding: 5px 14px;
+    letter-spacing: 0.05em;
+  }
+
+  @media(max-width:1024px){
+    .leader-section, .leader-section.reverse { grid-template-columns: 1fr; }
+    .leader-section.reverse .leader-photo-wrap, .leader-section.reverse .leader-content { order: unset; }
+    .leader-credentials { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner full">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Leadership</span></div>
+      <h1>Guided by<br><em>Experience</em></h1>
+      <p class="page-hero-desc">Aflak Holdings is led by two founders whose combined careers span over four decades across banking, wealth management, financial technology, and investment management in the UAE and internationally.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+
+    <!-- Abdelqader -->
+    <div class="leader-section fade-in">
+      <div class="leader-photo-wrap">
+        <img src="abdelqader.jpeg" alt="Abdelqader Al Kahloot">
+        <div class="leader-photo-accent">
+          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+      </div>
+      <div class="leader-content">
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Co-Founder</span></div>
+        <h2>Abdelqader<br>Al Kahloot</h2>
+        <span class="leader-role">Senior Executive Officer &amp; Director</span>
+        <div class="leader-bio-block">
+          <p>Abdelqader Al Kahloot brings over 18 years of experience in high-net-worth wealth management, banking, and senior sales leadership across the UAE and the wider Gulf region. His career has been defined by building deep, trust-based client relationships at the most senior levels of private banking.</p>
+          <p>Most recently serving as Senior Executive Director at ASAS Capital Ltd in the DIFC — a DFSA-regulated wealth management firm — Abdelqader has also held Vice President and Head of Sales roles at Mashreq Bank's Mashreq Gold division, overseeing strategy execution across the UAE and Egypt markets. Prior to that, he spent six years as a Premier Wealth Relationship Manager at HSBC Abu Dhabi, building and managing portfolios of high-net-worth clients across investments, insurance, credit, and banking services.</p>
+          <p>His approach to investment is grounded in genuine client partnership: understanding what matters most to each client, and constructing solutions that serve their long-term interests above all else. At Aflak Holdings, Abdelqader leads client relationships, business development, and the Group's overall strategic direction.</p>
+        </div>
+        <div class="leader-credentials">
+          <div class="cred-item">
+            <span class="cred-label">Education</span>
+            <span class="cred-val">Bachelor of Finance & Banking, Intermediate University College, Jordan — GPA 3.8/4.0 (Excellent with Honours)</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">Certifications</span>
+            <span class="cred-val">Risk in Financial Services — CISI (2020)<br>UAE Financial Rules & Regulations — CISI (2019)<br>Int'l Certificate in Wealth & Investment Management Level 3 — CISI (2012)</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">Nationality & Base</span>
+            <span class="cred-val">Jordanian — Dubai, UAE</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">DFSA Role</span>
+            <span class="cred-val">Licensed Senior Executive Officer (application in progress) &amp; Executive Director</span>
+          </div>
+        </div>
+        <div class="expertise-list">
+          <span class="expertise-label">Areas of Expertise</span>
+          <div class="expertise-tags">
+            <span class="expertise-tag">HNW & UHNW Client Management</span>
+            <span class="expertise-tag">Wealth Management</span>
+            <span class="expertise-tag">Sales Strategy</span>
+            <span class="expertise-tag">AML & Compliance</span>
+            <span class="expertise-tag">Team Leadership</span>
+            <span class="expertise-tag">Structured Products</span>
+            <span class="expertise-tag">Private Banking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Melvine -->
+    <div class="leader-section reverse fade-in-2">
+      <div class="leader-photo-wrap">
+        <img src="melvine.jpg" alt="Melvine Mathews">
+        <div class="leader-photo-accent">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+      </div>
+      <div class="leader-content">
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Co-Founder</span></div>
+        <h2>Melvine<br>Mathews</h2>
+        <span class="leader-role">Director &amp; Chief Principal</span>
+        <div class="leader-bio-block">
+          <p>Melvine Mathews brings over 25 years of experience spanning banking, financial technology, analytics, and investment management. A Chevening Scholar with an MBA in Finance from Lancaster University and a computer science engineering background, he sits at the rare intersection of quantitative rigour and financial services leadership.</p>
+          <p>Most recently serving as Senior Executive Director at ASAS Capital Ltd (DIFC), Melvine has previously held senior roles at Mashreq Bank as VP of Proposition, Portfolio & Products, and spent over a decade at Standard Chartered Bank in Dubai in roles spanning Priority & International Banking, Retail Analytics for the MEA region, and digital payments. During his time at Standard Chartered, he achieved a 34% CAGR on qualified priority clients and drove 25% uplift in campaign ROI through machine learning-based portfolio modelling.</p>
+          <p>His technical capabilities — spanning predictive analytics, AI and machine learning, blockchain, and systematic quantitative strategies — are directly applied to Aflak's investment intelligence infrastructure. At Aflak Holdings, Melvine leads investment strategy, analytical frameworks, and technology platform development.</p>
+        </div>
+        <div class="leader-credentials">
+          <div class="cred-item">
+            <span class="cred-label">Education</span>
+            <span class="cred-val">MBA (Finance) — Lancaster University, UK (2002)<br>BE (Computer Science) — University of Mumbai (1998)</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">Awards</span>
+            <span class="cred-val">Chevening Scholar — UK Government Award for outstanding emerging leaders</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">Nationality & Base</span>
+            <span class="cred-val">Indian — Dubai, UAE</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">DFSA Role</span>
+            <span class="cred-val">Licensed Director (application in progress)</span>
+          </div>
+        </div>
+        <div class="expertise-list">
+          <span class="expertise-label">Areas of Expertise</span>
+          <div class="expertise-tags">
+            <span class="expertise-tag">AI & Machine Learning</span>
+            <span class="expertise-tag">Portfolio Management</span>
+            <span class="expertise-tag">Fintech & Digital Platforms</span>
+            <span class="expertise-tag">Quantitative Strategy</span>
+            <span class="expertise-tag">DeFi & Digital Assets</span>
+            <span class="expertise-tag">Data Analytics</span>
+            <span class="expertise-tag">DFSA Regulatory</span>
+            <span class="expertise-tag">Blockchain (Solidity)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

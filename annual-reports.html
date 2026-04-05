@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annual Reports — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .ir-nav { display:flex;gap:2px;margin-bottom:72px;flex-wrap:wrap; }
+  .ir-nav a { padding:12px 24px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--charcoal);color:rgba(245,242,237,.5);transition:all .3s;border:1px solid transparent; }
+  .ir-nav a.active,.ir-nav a:hover { color:var(--gold);border-color:rgba(184,151,106,.3); }
+
+  .report-card {
+    border: 1px solid rgba(184,151,106,0.15);
+    display: grid;
+    grid-template-columns: 180px 1fr auto;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 48px;
+    margin-bottom: 2px;
+    transition: border-color 0.3s, background 0.3s;
+    background: var(--off-black);
+  }
+  .report-card:hover { border-color:rgba(184,151,106,.35);background:var(--charcoal); }
+
+  .report-year { font-family:var(--serif);font-size:48px;font-weight:300;color:var(--warm-white);line-height:1; }
+  .report-year.upcoming { color:rgba(245,242,237,.25); }
+
+  .report-info h4 { font-family:var(--serif);font-size:22px;font-weight:400;color:var(--warm-white);margin-bottom:8px; }
+  .report-info p { font-size:13px;color:rgba(245,242,237,.45);line-height:1.7; }
+  .report-status { display:inline-flex;align-items:center;gap:8px;font-size:9px;letter-spacing:.22em;text-transform:uppercase;padding:5px 14px;border:1px solid;margin-top:12px; }
+  .report-status.pending { color:var(--gold);border-color:rgba(184,151,106,.3); }
+  .report-status.available { color:#6bc28a;border-color:rgba(107,194,138,.3); }
+
+  .countdown-block {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,.12);
+    padding: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .countdown-block::before { content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent); }
+  .countdown-icon { width:64px;height:64px;border:1px solid rgba(184,151,106,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 28px; }
+  .countdown-icon svg { width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round; }
+  .countdown-block h3 { font-family:var(--serif);font-size:32px;font-weight:300;color:var(--warm-white);margin-bottom:16px; }
+  .countdown-block h3 em { font-style:italic;color:var(--gold-light); }
+  .countdown-block p { font-size:15px;color:rgba(245,242,237,.5);max-width:560px;margin:0 auto;line-height:1.85; }
+  .countdown-date { font-family:var(--serif);font-size:20px;font-style:italic;color:var(--gold-light);margin-top:20px; }
+
+  .what-inside { display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px; }
+  .wi-card { background:var(--charcoal);padding:36px 32px; }
+  .wi-num { font-size:10px;letter-spacing:.25em;color:var(--gold);margin-bottom:14px;display:block; }
+  .wi-title { font-family:var(--serif);font-size:18px;font-weight:400;color:var(--warm-white);margin-bottom:10px; }
+  .wi-desc { font-size:13px;color:rgba(245,242,237,.4);line-height:1.75; }
+
+  @media(max-width:1024px){ .report-card{grid-template-columns:1fr;gap:16px;} .what-inside{grid-template-columns:1fr 1fr;} .countdown-block{padding:48px 28px;} }
+  @media(max-width:768px){ .what-inside{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner full">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Annual Reports</span></div>
+      <h1>Financial<br><em>Transparency</em></h1>
+      <p class="page-hero-desc">We believe that clear, comprehensive financial reporting is fundamental to the trust between an investment group and its stakeholders. Our first Annual Report will be published at the close of our inaugural financial year.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="ir-nav">
+      <a href="investor-relations.html">Overview</a>
+      <a href="annual-reports.html" class="active">Annual Reports</a>
+      <a href="governance.html">Governance</a>
+      <a href="contact-ir.html">Contact IR</a>
+    </div>
+
+    <!-- 2026 Report Placeholder -->
+    <div class="report-card">
+      <div class="report-year upcoming">2026</div>
+      <div class="report-info">
+        <h4>Aflak Holdings — Annual Report 2026</h4>
+        <p>Aflak Holdings' inaugural Annual Report, covering the period from incorporation through 31 December 2026. The report will include audited financial statements, a letter from the founders, an overview of investment activity, and our first sustainability disclosure.</p>
+        <span class="report-status pending">
+          <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Publication Expected Q1 2027
+        </span>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,242,237,.3);margin-bottom:8px;">Status</div>
+        <div style="font-family:var(--serif);font-size:15px;color:rgba(184,151,106,.5);font-style:italic;">In Preparation</div>
+      </div>
+    </div>
+
+    <!-- Countdown block -->
+    <div class="countdown-block">
+      <div class="countdown-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>Our First Report is<br><em>On Its Way</em></h3>
+      <p>Aflak Holdings was established in 2026. As this is our year of inception, our inaugural Annual Report is currently in preparation and will be published in Q1 2027, following the close of our first full financial year ending 31 December 2026.</p>
+      <p class="countdown-date">Expected: Q1 2027</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>What to Expect</span></div>
+    <h2>What Our Annual<br>Report Will <em>Cover</em></h2>
+    <div class="what-inside">
+      <div class="wi-card"><span class="wi-num">01</span><div class="wi-title">Founders' Letter</div><p class="wi-desc">A candid account from Abdelqader Al Kahloot and Melvine Mathews on the year, the decisions we made, and the direction we are headed.</p></div>
+      <div class="wi-card"><span class="wi-num">02</span><div class="wi-title">Audited Financials</div><p class="wi-desc">Full audited financial statements prepared in accordance with applicable DIFC accounting standards and reviewed by our external auditors.</p></div>
+      <div class="wi-card"><span class="wi-num">03</span><div class="wi-title">Investment Activity</div><p class="wi-desc">A transparent account of investment decisions made during the year — including both completed investments and opportunities considered but not pursued.</p></div>
+      <div class="wi-card"><span class="wi-num">04</span><div class="wi-title">Governance Report</div><p class="wi-desc">An overview of our governance framework, board activity, compliance status, and any material regulatory developments during the period.</p></div>
+      <div class="wi-card"><span class="wi-num">05</span><div class="wi-title">Sustainability Disclosure</div><p class="wi-desc">Our first ESG disclosure, documenting how we have applied our sustainability framework across our investment activity and operations.</p></div>
+      <div class="wi-card"><span class="wi-num">06</span><div class="wi-title">Outlook</div><p class="wi-desc">An honest assessment of the investment environment and our priorities for the year ahead — including pipeline activity, market positioning, and team development.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner" style="text-align:center;max-width:600px;margin:0 auto;">
+    <div class="section-eyebrow" style="justify-content:center;"><div class="section-eyebrow-line"></div><span>Stay Informed</span></div>
+    <h2>Be First to<br><em>Receive Our Report</em></h2>
+    <p style="color:rgba(245,242,237,.5);font-size:15px;margin:20px 0 36px;line-height:1.8;">Register your interest and we will notify you as soon as our Annual Report is published, along with any other material investor communications.</p>
+    <div class="form-row" style="text-align:left;max-width:500px;margin:0 auto 16px;">
+      <div class="form-group"><label>Name</label><input type="text" placeholder="Your full name"></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="name@example.com"></div>
+    </div>
+    <button class="form-submit" type="button" style="margin:0 auto;">
+      Register Interest
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </button>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

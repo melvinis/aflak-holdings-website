@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Governance — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .ir-nav { display:flex;gap:2px;margin-bottom:72px;flex-wrap:wrap; }
+  .ir-nav a { padding:12px 24px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--charcoal);color:rgba(245,242,237,.5);transition:all .3s;border:1px solid transparent; }
+  .ir-nav a.active,.ir-nav a:hover { color:var(--gold);border-color:rgba(184,151,106,.3); }
+
+  .gov-framework {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .gov-card { background:var(--charcoal);padding:44px 36px;border-bottom:2px solid transparent;transition:border-color .3s; }
+  .gov-card:hover { border-color:var(--gold); }
+  .gov-icon { width:44px;height:44px;border:1px solid rgba(184,151,106,.25);display:flex;align-items:center;justify-content:center;margin-bottom:24px; }
+  .gov-icon svg { width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+  .gov-title { font-family:var(--serif);font-size:20px;font-weight:400;color:var(--warm-white);margin-bottom:12px; }
+  .gov-desc { font-size:13px;color:rgba(245,242,237,.45);line-height:1.8; }
+
+  .policy-list { display:flex;flex-direction:column;gap:0;border:1px solid rgba(184,151,106,.1); }
+  .policy-item { display:grid;grid-template-columns:280px 1fr 160px;gap:32px;padding:24px 36px;border-bottom:1px solid rgba(184,151,106,.08);align-items:center;transition:background .3s; }
+  .policy-item:hover { background:var(--charcoal); }
+  .policy-item:last-child { border-bottom:none; }
+  .policy-name { font-size:14px;color:var(--warm-white); }
+  .policy-desc { font-size:13px;color:rgba(245,242,237,.4);line-height:1.6; }
+  .policy-status { font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-align:right;border:1px solid rgba(184,151,106,.25);padding:5px 12px;display:inline-block; }
+
+  .board-grid { display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:60px; }
+  .board-card { background:var(--charcoal);padding:40px;border:1px solid rgba(184,151,106,.08);transition:border-color .3s; }
+  .board-card:hover { border-color:rgba(184,151,106,.28); }
+  .board-name { font-family:var(--serif);font-size:22px;font-weight:400;color:var(--warm-white);margin-bottom:4px; }
+  .board-role { font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block; }
+  .board-desc { font-size:13px;color:rgba(245,242,237,.45);line-height:1.75; }
+
+  @media(max-width:1024px){ .gov-framework{grid-template-columns:1fr 1fr;} .policy-item{grid-template-columns:1fr;gap:8px;} .policy-status{text-align:left;} .board-grid{grid-template-columns:1fr;} }
+  @media(max-width:768px){ .gov-framework{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Governance</span></div>
+      <h1>Governance<br>from <em>Day One</em></h1>
+      <p class="page-hero-desc">Sound governance is not something a company builds over time — it is something that must be designed in from the beginning. At Aflak Holdings, our governance framework reflects the highest standards of the DFSA regulatory environment from our first day of operation.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>We operate in the DIFC — one of the world's most respected international financial centres — under the oversight of the Dubai Financial Services Authority. The DFSA's regulatory standards for governance, conduct, AML, and client protection are not constraints we navigate around. They are foundations we build on.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="ir-nav">
+      <a href="investor-relations.html">Overview</a>
+      <a href="annual-reports.html">Annual Reports</a>
+      <a href="governance.html" class="active">Governance</a>
+      <a href="contact-ir.html">Contact IR</a>
+    </div>
+
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Governance Framework</span></div>
+    <h2>How We Are<br><em>Structured</em></h2>
+    <div class="gov-framework">
+      <div class="gov-card">
+        <div class="gov-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="gov-title">Board of Directors</div>
+        <p class="gov-desc">Aflak Holdings is governed by a Board of Directors comprising the two founding Executive Directors. Board composition and independent oversight arrangements will evolve as the Group grows, in line with DFSA requirements and best practice corporate governance standards.</p>
+      </div>
+      <div class="gov-card">
+        <div class="gov-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="gov-title">DFSA Oversight</div>
+        <p class="gov-desc">We operate under the regulatory oversight of the Dubai Financial Services Authority. DFSA licensing applications are in progress for Licensed SEO and Licensed Director functions. All activities are conducted in full compliance with DFSA COB, AML, GEN, and PIB rulebooks.</p>
+      </div>
+      <div class="gov-card">
+        <div class="gov-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="gov-title">Internal Controls</div>
+        <p class="gov-desc">We have established a comprehensive internal controls framework from inception, covering investment approval processes, AML and KYC procedures, conflict of interest management, and financial reporting controls. All significant decisions require dual authorisation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Board Composition</span></div>
+    <h2>Executive <em>Directors</em></h2>
+    <div class="board-grid">
+      <div class="board-card">
+        <div class="board-name">Abdelqader Al Kahloot</div>
+        <span class="board-role">Senior Executive Officer &amp; Executive Director</span>
+        <p class="board-desc">Responsible for overall Group strategy, client relationships, and regulatory compliance. Holds CISI certifications in Wealth & Investment Management, UAE Financial Rules & Regulations, and Risk in Financial Services. DFSA Licensed SEO application in progress.</p>
+      </div>
+      <div class="board-card">
+        <div class="board-name">Melvine Mathews</div>
+        <span class="board-role">Director &amp; Chief Principal</span>
+        <p class="board-desc">Responsible for investment strategy, technology infrastructure, and analytical frameworks. MBA in Finance from Lancaster University. Chevening Scholar. Currently serving as Senior Executive Director at ASAS Capital Ltd (DFSA-regulated). DFSA Licensed Director application in progress.</p>
+      </div>
+    </div>
+    <div style="background:var(--charcoal);border:1px solid rgba(184,151,106,.1);padding:36px;margin-top:2px;">
+      <p style="font-size:13px;color:rgba(245,242,237,.4);line-height:1.75;font-style:italic;">Note: As Aflak Holdings is newly established, the Board currently comprises the two founding Executive Directors. We intend to appoint independent non-executive directors as the Group grows, in line with applicable DFSA requirements and our own commitment to best practice governance.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Policies & Documents</span></div>
+    <h2>Governance<br><em>Documentation</em></h2>
+    <div class="policy-list" style="margin-top:40px;">
+      <div class="policy-item">
+        <span class="policy-name">AML & KYC Policy</span>
+        <span class="policy-desc">Anti-money laundering and know-your-customer procedures consistent with UAE Cabinet Resolution No. 96 of 2023 and DFSA AML rulebook requirements.</span>
+        <span class="policy-status">In Force</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-name">Conflicts of Interest Policy</span>
+        <span class="policy-desc">Framework for identifying, disclosing, and managing conflicts of interest between the Group, its employees, and its clients.</span>
+        <span class="policy-status">In Force</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-name">Investment Policy Statement</span>
+        <span class="policy-desc">Formal documentation of our investment mandate, sector focus, risk parameters, and decision-making authority framework.</span>
+        <span class="policy-status">In Force</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-name">Data Protection Policy</span>
+        <span class="policy-desc">Policy governing the collection, processing, storage, and protection of personal data in accordance with applicable DIFC data protection legislation.</span>
+        <span class="policy-status">In Force</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-name">Whistleblowing Policy</span>
+        <span class="policy-desc">Confidential reporting framework allowing employees, clients, and other stakeholders to raise concerns about potential misconduct or regulatory breach.</span>
+        <span class="policy-status">In Force</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-name">Annual Report 2026</span>
+        <span class="policy-desc">Audited financial statements and comprehensive annual disclosure for the period ending 31 December 2026.</span>
+        <span class="policy-status">Q1 2027</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(245,242,237,.3);margin-top:20px;font-style:italic;">Copies of governance policies are available to clients and regulated counterparties upon request. Please contact <a href="mailto:governance@aflakholdings.com" style="color:var(--gold);text-decoration:none;">governance@aflakholdings.com</a></p>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

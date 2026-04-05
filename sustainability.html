@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sustainability — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .pillar-card {
+    background: var(--charcoal);
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .pillar-card:hover { border-color: var(--gold); }
+  .pillar-icon { width: 44px; height: 44px; border: 1px solid rgba(184,151,106,.3); display:flex;align-items:center;justify-content:center; margin-bottom: 28px; }
+  .pillar-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .pillar-title { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--warm-white); margin-bottom: 14px; }
+  .pillar-desc { font-size: 13px; color: rgba(245,242,237,.45); line-height: 1.8; }
+
+  .commitment-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .commitment-item {
+    background: var(--off-black);
+    border: 1px solid rgba(184,151,106,.08);
+    padding: 40px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: border-color 0.3s;
+  }
+  .commitment-item:hover { border-color: rgba(184,151,106,.25); }
+  .commitment-num { font-family: var(--serif); font-size: 40px; font-weight: 300; color: rgba(184,151,106,.2); line-height: 1; flex-shrink: 0; width: 48px; }
+  .commitment-text h4 { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--warm-white); margin-bottom: 10px; }
+  .commitment-text p { font-size: 13px; color: rgba(245,242,237,.45); line-height: 1.8; }
+
+  .uae-banner {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,.12);
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .uae-banner h3 { font-family: var(--serif); font-size: 30px; font-weight: 300; margin-bottom: 16px; }
+  .uae-banner h3 em { font-style: italic; color: var(--gold-light); }
+  .uae-banner p { font-size: 14px; color: rgba(245,242,237,.5); line-height: 1.85; }
+  .uae-goals { display: flex; flex-direction: column; gap: 14px; }
+  .uae-goal { display: flex; gap: 16px; align-items: flex-start; }
+  .uae-goal-tag { background: rgba(184,151,106,.12); border: 1px solid rgba(184,151,106,.2); color: var(--gold); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; padding: 4px 10px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+  .uae-goal-text { font-size: 13px; color: rgba(245,242,237,.5); line-height: 1.6; }
+
+  @media(max-width:1024px){ .pillar-grid{grid-template-columns:1fr 1fr;} .commitment-row{grid-template-columns:1fr;} .uae-banner{grid-template-columns:1fr;} }
+  @media(max-width:768px){ .pillar-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Sustainability</span></div>
+      <h1>Investing<br>with <em>Conscience</em></h1>
+      <p class="page-hero-desc">Sustainability at Aflak Holdings is not a reporting exercise. It is a lens through which we evaluate every investment decision, every partnership, and every commitment we make.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>As a new company, we have the rare opportunity to embed sustainability from the very beginning — not to retrofit it onto an existing portfolio, but to make it a founding condition of how we invest and operate.</p>
+      <p style="margin-top:20px;">We are committed to aligning with the UAE's Net Zero 2050 vision and the broader ESG principles that define responsible capital stewardship in the 21st century.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Three Pillars -->
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our ESG Framework</span></div>
+    <h2>Three Pillars of<br>Responsible <em>Investment</em></h2>
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="pillar-title">Environmental</div>
+        <p class="pillar-desc">We evaluate the environmental footprint of every asset we consider. In real estate, this means energy efficiency standards, green building certifications, and sustainable materials. In technology, it means backing platforms that reduce, not increase, resource consumption. We will not invest in sectors or assets whose environmental impact is irreconcilable with long-term sustainability.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="pillar-title">Social</div>
+        <p class="pillar-desc">We believe that capital deployed responsibly creates social as well as financial returns. This means investing in assets and businesses that contribute positively to the communities they operate within — creating employment, supporting financial inclusion, and treating all stakeholders with dignity and fairness. It also means how we treat our own people: with respect, transparency, and genuine care for their development.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="pillar-title">Governance</div>
+        <p class="pillar-desc">Governance is where sustainability meets accountability. We operate within the DFSA regulatory framework — one of the world's most demanding — and we embrace that standard as a baseline, not a ceiling. Our internal governance structures are designed to ensure that every decision is properly authorised, properly documented, and properly reviewed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Commitments -->
+<section>
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Commitments</span></div>
+    <h2>What We Commit<br>to <em>From Day One</em></h2>
+    <div class="commitment-row">
+      <div class="commitment-item">
+        <div class="commitment-num">01</div>
+        <div class="commitment-text">
+          <h4>ESG Due Diligence on Every Investment</h4>
+          <p>We integrate environmental, social, and governance screening into our investment evaluation process from the earliest stage of any opportunity assessment. ESG is not a post-investment consideration — it is a pre-condition of investment.</p>
+        </div>
+      </div>
+      <div class="commitment-item">
+        <div class="commitment-num">02</div>
+        <div class="commitment-text">
+          <h4>Transparent Reporting to Stakeholders</h4>
+          <p>We will publish annual sustainability disclosures alongside our financial reports, providing a clear and honest account of how we have lived up to our stated principles. We hold ourselves to the same transparency we demand of others.</p>
+        </div>
+      </div>
+      <div class="commitment-item">
+        <div class="commitment-num">03</div>
+        <div class="commitment-text">
+          <h4>Preference for Green-Certified Real Estate</h4>
+          <p>Within our real estate sector, we will actively prioritise assets that meet or are being developed to meet recognised green building standards such as LEED or BREEAM, consistent with the UAE's vision for a sustainable built environment.</p>
+        </div>
+      </div>
+      <div class="commitment-item">
+        <div class="commitment-num">04</div>
+        <div class="commitment-text">
+          <h4>Technology That Enables, Not Extracts</h4>
+          <p>In our technology sector investments, we favour platforms that create genuine value for their users — that improve access to financial services, reduce friction, or democratise opportunity — over those that simply extract margin without creating corresponding benefit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- UAE Alignment -->
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>UAE Alignment</span></div>
+    <h2>Aligned with the<br><em>UAE's Vision</em></h2>
+    <div class="uae-banner" style="margin-top:60px;">
+      <div>
+        <h3>In Step with<br><em>Net Zero 2050</em></h3>
+        <p>The UAE has made ambitious and genuine commitments to sustainability — from the Net Zero by 2050 strategic initiative to hosting COP28 in Dubai. As a company headquartered in the UAE and investing primarily in the region, Aflak Holdings is committed to operating in a manner consistent with these national goals.</p>
+        <p style="margin-top:16px;">We see the UAE's sustainability agenda not as a constraint but as a directional signal — pointing toward the sectors, assets, and business models that will create the most durable value over the coming decades.</p>
+      </div>
+      <div class="uae-goals">
+        <div class="uae-goal">
+          <span class="uae-goal-tag">Net Zero 2050</span>
+          <span class="uae-goal-text">We align our investment strategy with the UAE's commitment to achieving net zero carbon emissions by 2050.</span>
+        </div>
+        <div class="uae-goal">
+          <span class="uae-goal-tag">Vision 2031</span>
+          <span class="uae-goal-text">Our technology and financial services investments support the UAE's ambition to build a knowledge-based, innovation-driven economy.</span>
+        </div>
+        <div class="uae-goal">
+          <span class="uae-goal-tag">DIFC Standards</span>
+          <span class="uae-goal-text">As a DIFC-based entity, we operate under one of the world's leading financial regulatory frameworks, consistent with global sustainability standards.</span>
+        </div>
+        <div class="uae-goal">
+          <span class="uae-goal-tag">Social Value</span>
+          <span class="uae-goal-text">We support the UAE's commitment to inclusive economic growth, financial literacy, and equitable access to capital across the community.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

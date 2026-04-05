@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Services — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .sector-nav { display:flex;gap:2px;margin-bottom:80px; }
+  .sector-nav a { padding:12px 24px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--charcoal);color:rgba(245,242,237,.5);transition:all .3s;border:1px solid transparent; }
+  .sector-nav a.active,.sector-nav a:hover { color:var(--gold);border-color:rgba(184,151,106,.3); }
+
+  .service-grid { display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:60px; }
+  .service-card { background:var(--charcoal);padding:44px 40px;position:relative;overflow:hidden;border-left:3px solid transparent;transition:border-color .3s; }
+  .service-card:hover { border-left-color:var(--gold); }
+  .service-num { font-family:var(--serif);font-size:11px;letter-spacing:.25em;color:var(--gold);margin-bottom:20px;display:block; }
+  .service-title { font-family:var(--serif);font-size:22px;font-weight:400;color:var(--warm-white);margin-bottom:14px; }
+  .service-desc { font-size:13px;color:rgba(245,242,237,.45);line-height:1.8; }
+
+  .expertise-bands { display:flex;flex-direction:column;gap:0;border:1px solid rgba(184,151,106,.1); }
+  .expertise-band { display:flex;align-items:center;gap:32px;padding:24px 36px;border-bottom:1px solid rgba(184,151,106,.08);transition:background .3s; }
+  .expertise-band:last-child { border-bottom:none; }
+  .expertise-band:hover { background:var(--charcoal); }
+  .expertise-band-icon { width:36px;height:36px;border:1px solid rgba(184,151,106,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+  .expertise-band-icon svg { width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+  .expertise-band-text { font-size:14px;color:rgba(245,242,237,.6); }
+  .expertise-band-text strong { color:var(--warm-white);font-weight:400; }
+
+  @media(max-width:1024px){ .service-grid{grid-template-columns:1fr;} }
+  @media(max-width:768px){ .sector-nav{flex-wrap:wrap;} .expertise-band{flex-wrap:wrap;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Sectors — Financial Services</span></div>
+      <h1>Sophisticated<br><em>Financial Services</em></h1>
+      <p class="page-hero-desc">We invest in and operate financial services businesses that deliver genuine value to clients — through disciplined wealth management, intelligent capital solutions, and technology-enabled investment platforms.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>Financial services is the sector our founders know best. Between them, Abdelqader Al Kahloot and Melvine Mathews bring over four decades of direct experience in HNW wealth management, private banking, investment product structuring, and DFSA-regulated operations.</p>
+      <p style="margin-top:20px;">This is not a sector we are entering from the outside. It is one we have spent careers inside.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="sector-nav">
+      <a href="sectors-realestate.html">Real Estate</a>
+      <a href="sectors-financial.html" class="active">Financial Services</a>
+      <a href="sectors-technology.html">Technology</a>
+    </div>
+
+    <div class="prose-grid">
+      <div>
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Approach</span></div>
+        <h2>Capital Solutions<br>Built on <em>Real Expertise</em></h2>
+        <div class="prose" style="margin-top:24px;">
+          <p>The financial services landscape in the UAE and GCC is evolving rapidly. The region's HNW and UHNW population is growing, the regulatory environment is maturing, and the demand for sophisticated, transparent wealth management is accelerating. Aflak Holdings is positioned to meet this demand with the depth of expertise and the integrity of approach that the market deserves.</p>
+          <p>Our financial services activity spans wealth management, private equity co-investment, and structured capital solutions. We work with clients who require more than product distribution — they require genuine investment partnership, built on a thorough understanding of their goals, their circumstances, and their risk profile.</p>
+          <p>All financial services activities are conducted within the DFSA regulatory framework, with licensing applications in progress. We do not compromise on regulatory compliance. It is the bedrock of everything we do.</p>
+        </div>
+      </div>
+      <div>
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Founder Credentials</span></div>
+        <div class="expertise-bands" style="margin-top:20px;">
+          <div class="expertise-band">
+            <div class="expertise-band-icon"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <span class="expertise-band-text"><strong>18+ years</strong> HNW & UHNW client management across Mashreq Gold and HSBC Premier Wealth</span>
+          </div>
+          <div class="expertise-band">
+            <div class="expertise-band-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <span class="expertise-band-text"><strong>CISI certified</strong> in Wealth & Investment Management, Financial Rules & Regulations, and Risk</span>
+          </div>
+          <div class="expertise-band">
+            <div class="expertise-band-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <span class="expertise-band-text"><strong>AI-enabled CRM</strong> & multi-custodian portfolio aggregation platforms designed and deployed at scale</span>
+          </div>
+          <div class="expertise-band">
+            <div class="expertise-band-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <span class="expertise-band-text"><strong>DFSA-regulated</strong> experience at ASAS Capital Ltd as Senior Executive Directors</span>
+          </div>
+          <div class="expertise-band">
+            <div class="expertise-band-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <span class="expertise-band-text"><strong>34% CAGR</strong> achieved on qualified Priority Banking clients at Standard Chartered Dubai</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Service Areas</span></div>
+    <h2>What We <em>Do</em></h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <div class="service-title">Wealth Management</div>
+        <p class="service-desc">Bespoke wealth management for high-net-worth and ultra-high-net-worth individuals and families. We construct and manage investment portfolios across equities, fixed income, alternatives, and structured products, with a focus on genuine alignment with each client's long-term objectives.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <div class="service-title">Private Equity Co-Investment</div>
+        <p class="service-desc">We identify co-investment opportunities in high-quality private companies across the UAE and GCC, offering clients access to carefully selected private equity transactions alongside our own capital. We invest where we have knowledge and conviction.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <div class="service-title">Structured Capital Solutions</div>
+        <p class="service-desc">We structure bespoke capital solutions for clients with complex needs — including Lombard lending arrangements, portfolio leverage, multi-asset structuring, and cross-border investment frameworks appropriate for DIFC-based clients.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <div class="service-title">Digital Asset Allocation</div>
+        <p class="service-desc">For clients seeking exposure to digital assets, we offer institutional-grade digital asset portfolio construction, on-chain AML screening, and DeFi yield strategy expertise. This is a growing client segment in the UAE and GCC, and one we serve with the same rigour as any other asset class.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .timeline { margin-top: 80px; position: relative; }
+  .timeline::before { content:'';position:absolute;left:0;top:0;width:1px;height:100%;background:rgba(184,151,106,0.2); }
+  .timeline-item { padding-left: 40px; padding-bottom: 56px; position: relative; }
+  .timeline-item::before { content:'';position:absolute;left:-5px;top:6px;width:11px;height:11px;border:1px solid var(--gold);background:var(--obsidian);transform:rotate(45deg); }
+  .timeline-year { font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block; }
+  .timeline-title { font-family:var(--serif);font-size:22px;font-weight:400;color:var(--warm-white);margin-bottom:10px; }
+  .timeline-desc { font-size:14px;color:rgba(245,242,237,.5);line-height:1.8;max-width:600px; }
+
+  .values-strip {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .value-strip-item {
+    background: var(--charcoal);
+    padding: 40px 32px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .value-strip-item:hover { border-color: var(--gold); }
+  .value-strip-num { font-family:var(--serif);font-size:48px;font-weight:300;color:rgba(184,151,106,.12);line-height:1;display:block;margin-bottom:16px; }
+  .value-strip-title { font-family:var(--serif);font-size:20px;font-weight:400;color:var(--warm-white);margin-bottom:10px; }
+  .value-strip-desc { font-size:13px;color:rgba(245,242,237,.45);line-height:1.75; }
+
+  .founding-block {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,151,106,0.12);
+    padding: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .founding-block::before { content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--gold),transparent); }
+  .founding-quote { font-family:var(--serif);font-size:26px;font-style:italic;font-weight:300;line-height:1.55;color:var(--cream);margin-bottom:28px; }
+  .founding-attr { font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold); }
+  .founding-bg { position:absolute;bottom:-20px;right:0;font-family:var(--serif);font-size:220px;color:rgba(184,151,106,.04);line-height:1;pointer-events:none; }
+
+  @media(max-width:768px){ .values-strip{grid-template-columns:1fr 1fr;} }
+</style>
+</head>
+<body>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>About Us</span></div>
+      <h1>A New Chapter<br>in <em>Purposeful</em><br>Investment</h1>
+      <p class="page-hero-desc">Aflak Holdings was established in Dubai in 2026 by two senior professionals who share a conviction: that rigorous expertise, disciplined capital, and genuine client partnership are the foundations of enduring value.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>We are not a legacy institution. We are a beginning — deliberately built, carefully governed, and focused on sectors where our founders bring decades of firsthand expertise.</p>
+      <p style="margin-top:20px;">Headquartered at Gate Avenue, DIFC, Dubai, Aflak Holdings operates within one of the world's most sophisticated regulatory environments, with a mandate to grow with integrity.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Who We Are -->
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="prose-grid">
+      <div>
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Who We Are</span></div>
+        <h2 style="margin-bottom:32px;">Built on Expertise,<br>Guided by <em>Integrity</em></h2>
+        <div class="prose">
+          <p>Aflak Holdings is a Dubai-based investment group established to identify, structure, and steward capital across three sectors: real estate, financial services, and technology. We are founded by two professionals whose combined careers span over four decades across some of the most respected institutions in the UAE and internationally.</p>
+          <p>Our founders bring complementary strengths — one deeply rooted in HNW client relationship management and banking, the other in financial technology, data analytics, and digital platform architecture. Together, they bring both the relationship depth and the analytical rigour that serious investment demands.</p>
+          <p>We operate from the DIFC, Dubai's premier financial centre, within a regulatory environment that demands the highest standards of governance, transparency, and client protection. These standards are not constraints we navigate — they are principles we embrace.</p>
+        </div>
+      </div>
+      <div class="founding-block">
+        <p class="founding-quote">"We are not building on the past. We are building the foundation others will build upon."</p>
+        <span class="founding-attr">— The Aflak Investment Doctrine</span>
+        <div class="founding-bg">"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Our Story / Timeline -->
+<section>
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Story</span></div>
+    <h2 style="margin-bottom:16px;">The Aflak <em>Journey</em></h2>
+    <p style="color:rgba(245,242,237,.5);font-size:15px;max-width:560px;">Every institution has a founding moment. Ours is now.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-year">2026 — Founding</span>
+        <div class="timeline-title">Aflak Holdings Established</div>
+        <p class="timeline-desc">Aflak Holdings LLC is incorporated and registered in the DIFC, Dubai. Our two founders combine their complementary expertise to build a focused, disciplined investment group from the ground up.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2026 — Mandate</span>
+        <div class="timeline-title">Investment Framework Defined</div>
+        <p class="timeline-desc">Our investment mandate is formalised across three core sectors — real estate, financial services, and technology — with a clear set of principles governing how we evaluate, structure, and manage capital.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2026 — Regulatory</span>
+        <div class="timeline-title">DFSA Licensing in Progress</div>
+        <p class="timeline-desc">Applications are submitted for DFSA-regulated functions including Licensed SEO and Licensed Director, reinforcing our commitment to operating within the highest regulatory standards from day one.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2026 — Looking Ahead</span>
+        <div class="timeline-title">First Investments Identified</div>
+        <p class="timeline-desc">Our pipeline is active. We are in early conversations across all three focus sectors, applying our investment framework with patience and precision to identify opportunities worthy of the Aflak name.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Values Strip -->
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Principles</span></div>
+    <h2>What We <em>Stand For</em></h2>
+    <div class="values-strip">
+      <div class="value-strip-item">
+        <span class="value-strip-num">01</span>
+        <div class="value-strip-title">Integrity</div>
+        <p class="value-strip-desc">Every decision is grounded in transparency, ethical conduct, and accountability — to our partners, our clients, and the communities we operate within.</p>
+      </div>
+      <div class="value-strip-item">
+        <span class="value-strip-num">02</span>
+        <div class="value-strip-title">Longevity</div>
+        <p class="value-strip-desc">We think in decades. Sustainable value creation demands patience, discipline, and the courage to resist short-term pressures in favour of long-term outcomes.</p>
+      </div>
+      <div class="value-strip-item">
+        <span class="value-strip-num">03</span>
+        <div class="value-strip-title">Excellence</div>
+        <p class="value-strip-desc">We hold ourselves and those we partner with to the highest standards — in governance, in analysis, and in the care we bring to every relationship.</p>
+      </div>
+      <div class="value-strip-item">
+        <span class="value-strip-num">04</span>
+        <div class="value-strip-title">Legacy</div>
+        <p class="value-strip-desc">We are building something that will outlast us. Every choice we make today is made with that future institution in mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

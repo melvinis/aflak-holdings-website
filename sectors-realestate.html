@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate — Aflak Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .sector-nav { display:flex;gap:2px;margin-bottom:80px; }
+  .sector-nav a { padding:12px 24px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--charcoal);color:rgba(245,242,237,.5);transition:all .3s;border:1px solid transparent; }
+  .sector-nav a.active, .sector-nav a:hover { color:var(--gold);border-color:rgba(184,151,106,.3); }
+
+  .focus-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px; }
+  .focus-card { background:var(--charcoal);padding:44px 36px;border-bottom:2px solid transparent;transition:border-color .3s; }
+  .focus-card:hover { border-color:var(--gold); }
+  .focus-icon { width:44px;height:44px;border:1px solid rgba(184,151,106,.3);display:flex;align-items:center;justify-content:center;margin-bottom:24px; }
+  .focus-icon svg { width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; }
+  .focus-title { font-family:var(--serif);font-size:20px;font-weight:400;color:var(--warm-white);margin-bottom:12px; }
+  .focus-desc { font-size:13px;color:rgba(245,242,237,.45);line-height:1.8; }
+
+  .criteria-list { display:flex;flex-direction:column;gap:0;margin-top:40px;border:1px solid rgba(184,151,106,.1); }
+  .criteria-item { display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 36px;border-bottom:1px solid rgba(184,151,106,.08);align-items:start; }
+  .criteria-item:last-child { border-bottom:none; }
+  .criteria-label { font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding-top:2px; }
+  .criteria-text { font-size:14px;color:rgba(245,242,237,.55);line-height:1.75; }
+
+  @media(max-width:1024px){ .focus-grid{grid-template-columns:1fr 1fr;} .criteria-item{grid-template-columns:1fr;gap:8px;} }
+  @media(max-width:768px){ .focus-grid{grid-template-columns:1fr;} .sector-nav{flex-wrap:wrap;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="fade-in">
+      <div class="eyebrow"><div class="eyebrow-line"></div><span>Sectors — Real Estate</span></div>
+      <h1>Premium<br><em>Real Estate</em></h1>
+      <p class="page-hero-desc">We invest in and develop high-quality residential and commercial real estate across the UAE and wider GCC — assets built to attract discerning occupiers and generate sustainable, long-term returns.</p>
+    </div>
+    <div class="page-hero-right fade-in-2">
+      <p>The UAE real estate market offers a compelling combination of structural demand drivers, world-class infrastructure, and a regulatory environment that protects investor interests. We approach this market with deep local knowledge, disciplined underwriting, and a long-term ownership mindset.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="sector-nav">
+      <a href="sectors-realestate.html" class="active">Real Estate</a>
+      <a href="sectors-financial.html">Financial Services</a>
+      <a href="sectors-technology.html">Technology</a>
+    </div>
+
+    <div class="prose-grid wide">
+      <div>
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Our Approach</span></div>
+        <h2>Owning Assets That<br><em>Define Markets</em></h2>
+        <div class="prose" style="margin-top:24px;">
+          <p>Real estate is the most tangible of investment classes. Done well, it creates places where people live, work, and build their lives. Done poorly, it generates short-term returns at the cost of long-term value. At Aflak Holdings, we intend to do it well.</p>
+          <p>We focus on premium assets — residential developments in sought-after locations, commercial properties with quality tenants, and mixed-use projects that serve the evolving needs of a growing, cosmopolitan population. We are not traders. We are owners. And we approach every acquisition with the mindset of a long-term steward, not a short-term speculator.</p>
+          <p>Our real estate activity is currently in the pipeline and due diligence phase. We are evaluating a focused set of opportunities consistent with our investment criteria and will announce activity as investments are formalised.</p>
+        </div>
+      </div>
+      <div style="background:var(--charcoal);border:1px solid rgba(184,151,106,.1);padding:48px;">
+        <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Market Context</span></div>
+        <p style="font-family:var(--serif);font-size:22px;font-style:italic;font-weight:300;color:var(--cream);line-height:1.5;margin-bottom:24px;">"Dubai's real estate market continues to attract global capital — driven by safety, quality, and the vision of a world-class city."</p>
+        <p style="font-size:13px;color:rgba(245,242,237,.4);line-height:1.75;">The UAE property market in 2026 is characterised by sustained demand from international buyers, limited supply in the premium segment, and a regulatory environment that increasingly protects end-buyers and long-term investors. These conditions create a favourable backdrop for disciplined, quality-focused real estate investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section style="background:var(--off-black);">
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Focus Areas</span></div>
+    <h2>Where We <em>Invest</em></h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="focus-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="focus-title">Premium Residential</div>
+        <p class="focus-desc">High-quality residential developments and units in established and emerging prime locations across Dubai and the wider UAE, targeting the growing population of affluent residents and international buyers.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div class="focus-title">Grade-A Commercial</div>
+        <p class="focus-desc">Office and commercial assets in premium business districts — particularly the DIFC, Dubai Design District, and other established corporate hubs — occupied by quality tenants on long leases.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <div class="focus-title">Mixed-Use Development</div>
+        <p class="focus-desc">Integrated developments combining residential, retail, and community amenity — designed to create self-sustaining micro-communities with diversified income streams and resilient demand fundamentals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<section>
+  <div class="section-inner">
+    <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Investment Criteria</span></div>
+    <h2>What We Look<br>for in an <em>Asset</em></h2>
+    <div class="criteria-list">
+      <div class="criteria-item"><span class="criteria-label">Location</span><span class="criteria-text">Prime or emerging prime locations with strong connectivity, established infrastructure, and clear long-term demand drivers. We focus primarily on Dubai, with selective interest in Abu Dhabi and key GCC markets.</span></div>
+      <div class="criteria-item"><span class="criteria-label">Quality</span><span class="criteria-text">Assets built or being built to the highest construction and design standards, with specifications that attract and retain quality tenants or owners. We do not compromise on build quality.</span></div>
+      <div class="criteria-item"><span class="criteria-label">Sustainability</span><span class="criteria-text">A preference for assets that meet or are being developed to meet recognised green building standards, consistent with our ESG commitments and the UAE's Net Zero 2050 agenda.</span></div>
+      <div class="criteria-item"><span class="criteria-label">Tenure</span><span class="criteria-text">A minimum intended hold period of 5 years. We are buyers of assets we intend to own through cycles, not traders seeking short-term value extraction.</span></div>
+      <div class="criteria-item"><span class="criteria-label">Return Profile</span><span class="criteria-text">Risk-adjusted returns commensurate with the quality and duration of the investment. We do not chase yield at the expense of capital preservation or asset quality.</span></div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>
