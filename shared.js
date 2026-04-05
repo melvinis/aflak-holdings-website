@@ -12,7 +12,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="about.html" ${currentPage==='about.html'?'class="active"':''}>About</a></li>
-      <li><a href="sectors-realestate.html" ${currentPage.startsWith('sector')?'class="active"':''}>Sectors</a></li>
+      <li><a href="sectors-financial.html" ${currentPage.startsWith('sector')?'class="active"':''}>Sectors</a></li>
       <li><a href="leadership.html" ${currentPage==='leadership.html'?'class="active"':''}>Leadership</a></li>
       <li><a href="investor-relations.html" ${currentPage.startsWith('investor')?'class="active"':''}>Investors</a></li>
       <li><a href="careers.html" ${currentPage==='careers.html'?'class="active"':''}>Careers</a></li>
@@ -44,9 +44,9 @@
       <div class="footer-col">
         <h4>Sectors</h4>
         <ul>
-          <li><a href="sectors-realestate.html">Real Estate</a></li>
           <li><a href="sectors-financial.html">Financial Services</a></li>
           <li><a href="sectors-technology.html">Technology</a></li>
+          <li><a href="sectors-realestate.html">Real Estate</a></li>
         </ul>
       </div>
       <div class="footer-col">
